@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\base de données et prog web\\tps\\TP2_partie2_secours\\SussyKart_Partie1\\SussyKart_Partie1.csproj": {}
+    "C:\\Users\\1961739\\Downloads\\1961739-420-4D5-EM-TP2-2\\TP2_partie2_secours\\SussyKart_Partie1\\SussyKart_Partie1.csproj": {}
   },
   "projects": {
-    "D:\\base de données et prog web\\tps\\TP2_partie2_secours\\SussyKart_Partie1\\SussyKart_Partie1.csproj": {
+    "C:\\Users\\1961739\\Downloads\\1961739-420-4D5-EM-TP2-2\\TP2_partie2_secours\\SussyKart_Partie1\\SussyKart_Partie1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\base de données et prog web\\tps\\TP2_partie2_secours\\SussyKart_Partie1\\SussyKart_Partie1.csproj",
+        "projectUniqueName": "C:\\Users\\1961739\\Downloads\\1961739-420-4D5-EM-TP2-2\\TP2_partie2_secours\\SussyKart_Partie1\\SussyKart_Partie1.csproj",
         "projectName": "SussyKart_Partie1",
-        "projectPath": "D:\\base de données et prog web\\tps\\TP2_partie2_secours\\SussyKart_Partie1\\SussyKart_Partie1.csproj",
-        "packagesPath": "C:\\Users\\alimo\\.nuget\\packages\\",
-        "outputPath": "D:\\base de données et prog web\\tps\\TP2_partie2_secours\\SussyKart_Partie1\\obj\\",
+        "projectPath": "C:\\Users\\1961739\\Downloads\\1961739-420-4D5-EM-TP2-2\\TP2_partie2_secours\\SussyKart_Partie1\\SussyKart_Partie1.csproj",
+        "packagesPath": "C:\\Users\\1961739\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\1961739\\Downloads\\1961739-420-4D5-EM-TP2-2\\TP2_partie2_secours\\SussyKart_Partie1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\alimo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\1961739\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -65,8 +65,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -78,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.309\\RuntimeIdentifierGraph.json"
         }
       }
     }

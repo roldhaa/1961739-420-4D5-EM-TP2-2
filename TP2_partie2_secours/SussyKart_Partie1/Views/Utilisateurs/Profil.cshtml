@@ -18,6 +18,23 @@
                     Nombre d'amis : ???<!-- Partie 2 seulement -->
                 </div>
             </div>
+            <form asp-action="DesactiverCompte" class="mt-2">
+    <input type="number" hidden name="UtilisateurID" id="UtilisateurID" value="@ViewData["UtilisateurID"]" />
+    <button type="submit" class="btn btn-danger"><i class="bi bi-exclamation-triangle-fill"></i> Supprimer mon compte <i class="bi bi-exclamation-triangle-fill"></i></button>
+</form>
+
+<!-- Remplacez le <div> qui contient l'avatar par celui-ci : (De plus, ajouter un champ ImageUrl pour l'avatar dans ProfilVM) -->
+
+<div class="col-auto pl-2 avatar">
+<a asp-action="Avatar"><i class="bi bi-pencil-fill"></i></a>
+@if(Model.ImageUrl == null){
+    <img src="/images/avatarPlaceholder.png" alt="Avatar">
+}
+else
+{
+    <img src="@Model.ImageUrl" alt="Avatar">
+}
+</div>
         </div>
     </div>
 </div>

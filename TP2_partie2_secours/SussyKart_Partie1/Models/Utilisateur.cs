@@ -25,10 +25,6 @@ namespace SussyKart_Partie1.Models
         [StringLength(320)]
         public string Courriel { get; set; } = null!;
         public bool EstSuppr { get; set; }
-        [MaxLength(32)]
-        public byte[]? MotDePasseHache { get; set; }
-        [MaxLength(16)]
-        public byte[]? MdpSel { get; set; }
 
         [InverseProperty("Utilisateur")]
         public virtual ICollection<ParticipationCourse> ParticipationCourses { get; set; }

@@ -10,7 +10,7 @@ CREATE TABLE Courses.Course(
 	Nom varchar(50) NOT NULL,
 	NbTours int NOT NULL,
 	Difficulte varchar(15) NOT NULL,
-	CONSTRAINT PK_Course_CourseID PRIMARY KEY (CourseID)
+	CONSTRAINT PK_Course_CourseID PRIMARY KEY (CourseID) 
 );
 
 CREATE TABLE Utilisateurs.Utilisateur(

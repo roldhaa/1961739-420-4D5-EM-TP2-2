@@ -8,6 +8,7 @@ namespace SussyKart_Partie1.Controllers
 {
     public class StatsController : Controller
     {
+       
         private readonly TP2_SussyKartContext _context;
         
         public StatsController(TP2_SussyKartContext context)
@@ -24,7 +25,7 @@ namespace SussyKart_Partie1.Controllers
         public async Task<IActionResult> ToutesParticipations()
         {
             // Obtenir les participations grâce à une vue SQL
-            List<VwDetailsParticipation> participations = await _context.VwDetailsParticipations.Take(30).ToListAsync();
+            List<VwDetailsParticipation> participations = await _context.VwDetailsParticipation.Take(30).ToListAsync();
 
             return View(new FiltreParticipationVM() { Participations = participations });
         }
@@ -32,7 +33,7 @@ namespace SussyKart_Partie1.Controllers
         public async Task<IActionResult> ToutesParticipationsFiltre(FiltreParticipationVM fpvm)
         {
             // Obtenir les participations grâce à une vue SQL
-            List<VwDetailsParticipation> participations = await _context.VwDetailsParticipations.ToListAsync();
+            List<VwDetailsParticipation> participations = await _context.VwDetailsParticipation.ToListAsync();
 
             if (fpvm.Pseudo != null)
             {

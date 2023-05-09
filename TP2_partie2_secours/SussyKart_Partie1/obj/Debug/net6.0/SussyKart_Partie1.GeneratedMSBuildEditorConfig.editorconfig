@@ -5,57 +5,64 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
-build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SussyKart_Partie1
 build_property.RootNamespace = SussyKart_Partie1
-build_property.ProjectDir = D:\base de données et prog web\tps\TP2_partie2_secours\SussyKart_Partie1\
+build_property.ProjectDir = C:\Users\1961739\Downloads\1961739-420-4D5-EM-TP2-2\TP2_partie2_secours\SussyKart_Partie1\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\base de données et prog web\tps\TP2_partie2_secours\SussyKart_Partie1
+build_property.MSBuildProjectDirectory = C:\Users\1961739\Downloads\1961739-420-4D5-EM-TP2-2\TP2_partie2_secours\SussyKart_Partie1
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/base de données et prog web/tps/TP2_partie2_secours/SussyKart_Partie1/Views/Jeu/Index.cshtml]
+[C:/Users/1961739/Downloads/1961739-420-4D5-EM-TP2-2/TP2_partie2_secours/SussyKart_Partie1/Views/Jeu/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSmV1XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/base de données et prog web/tps/TP2_partie2_secours/SussyKart_Partie1/Views/Jeu/Jouer.cshtml]
+[C:/Users/1961739/Downloads/1961739-420-4D5-EM-TP2-2/TP2_partie2_secours/SussyKart_Partie1/Views/Jeu/Jouer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSmV1XEpvdWVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/base de données et prog web/tps/TP2_partie2_secours/SussyKart_Partie1/Views/Jeu/Tutoriel.cshtml]
+[C:/Users/1961739/Downloads/1961739-420-4D5-EM-TP2-2/TP2_partie2_secours/SussyKart_Partie1/Views/Jeu/Tutoriel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSmV1XFR1dG9yaWVsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/base de données et prog web/tps/TP2_partie2_secours/SussyKart_Partie1/Views/Shared/_Layout.cshtml]
+[C:/Users/1961739/Downloads/1961739-420-4D5-EM-TP2-2/TP2_partie2_secours/SussyKart_Partie1/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/base de données et prog web/tps/TP2_partie2_secours/SussyKart_Partie1/Views/Stats/Index.cshtml]
+[C:/Users/1961739/Downloads/1961739-420-4D5-EM-TP2-2/TP2_partie2_secours/SussyKart_Partie1/Views/Stats/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/base de données et prog web/tps/TP2_partie2_secours/SussyKart_Partie1/Views/Stats/ToutesParticipations.cshtml]
+[C:/Users/1961739/Downloads/1961739-420-4D5-EM-TP2-2/TP2_partie2_secours/SussyKart_Partie1/Views/Stats/ToutesParticipations.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdHNcVG91dGVzUGFydGljaXBhdGlvbnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/base de données et prog web/tps/TP2_partie2_secours/SussyKart_Partie1/Views/Utilisateurs/Connexion.cshtml]
+[C:/Users/1961739/Downloads/1961739-420-4D5-EM-TP2-2/TP2_partie2_secours/SussyKart_Partie1/Views/Utilisateurs/Amis.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRpbGlzYXRldXJzXEFtaXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/1961739/Downloads/1961739-420-4D5-EM-TP2-2/TP2_partie2_secours/SussyKart_Partie1/Views/Utilisateurs/Avatar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRpbGlzYXRldXJzXEF2YXRhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/1961739/Downloads/1961739-420-4D5-EM-TP2-2/TP2_partie2_secours/SussyKart_Partie1/Views/Utilisateurs/Connexion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRpbGlzYXRldXJzXENvbm5leGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/base de données et prog web/tps/TP2_partie2_secours/SussyKart_Partie1/Views/Utilisateurs/Inscription.cshtml]
+[C:/Users/1961739/Downloads/1961739-420-4D5-EM-TP2-2/TP2_partie2_secours/SussyKart_Partie1/Views/Utilisateurs/Inscription.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRpbGlzYXRldXJzXEluc2NyaXB0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/base de données et prog web/tps/TP2_partie2_secours/SussyKart_Partie1/Views/Utilisateurs/Profil.cshtml]
+[C:/Users/1961739/Downloads/1961739-420-4D5-EM-TP2-2/TP2_partie2_secours/SussyKart_Partie1/Views/Utilisateurs/Profil.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRpbGlzYXRldXJzXFByb2ZpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/base de données et prog web/tps/TP2_partie2_secours/SussyKart_Partie1/Views/_ViewImports.cshtml]
+[C:/Users/1961739/Downloads/1961739-420-4D5-EM-TP2-2/TP2_partie2_secours/SussyKart_Partie1/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/base de données et prog web/tps/TP2_partie2_secours/SussyKart_Partie1/Views/_ViewStart.cshtml]
+[C:/Users/1961739/Downloads/1961739-420-4D5-EM-TP2-2/TP2_partie2_secours/SussyKart_Partie1/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
