@@ -1,0 +1,20 @@
+Ajoutez ces styles n'importe où dans le fichier wwwroot/css/styles.css
+
+.avatar{
+    position:relative;
+}
+
+.avatar a{
+    position:absolute;
+    display:inline-block;
+    top:5px;
+    right:5px;
+}
+
+.avatar img{
+    width:150px;
+}
+
+.avatarAmi{
+    width:100px;
+}

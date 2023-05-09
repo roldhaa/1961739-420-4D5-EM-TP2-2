@@ -1,0 +1,5 @@
+Dams Views/Shared/_Layout.cshtml, modifiez le bouton de navigation vers la page Amis par ceci.
+
+<div class="col-auto px-3 white" style="color:white;">
+   Amis <i class="bi bi-people-fill"></i>
+</div>

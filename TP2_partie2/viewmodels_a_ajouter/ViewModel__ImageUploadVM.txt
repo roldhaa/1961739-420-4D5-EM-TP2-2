@@ -1,0 +1,8 @@
+// Ne pas oublier de mettre le bloc namespace !!!
+
+public class ImageUploadVM
+{
+    public IFormFile? FormFile { get; set; }
+    public int UtilisateurID { get; set; }
+
+}
