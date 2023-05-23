@@ -127,9 +127,20 @@ namespace SussyKart_Partie1.Controllers
         public async Task<IActionResult> Avatar()
         {
             // Trouver l'utilisateur grâce à son cookie.
-
+            IIdentity? identite = HttpContext.User.Identity;
+            string pseudo = HttpContext.User.FindFirstValue(ClaimTypes.Name);
+            Utilisateur? utilisateur = await _context.Utilisateurs.FirstOrDefaultAsync(x =>x.Pseudo == pseudo);
+            if (utilisateur != null)
+            {
+                return RedirectToAction("Connexion", "Utilisateurs");
+            }
             // Si utilisateur trouvé, retourner la vue Avatar avec un ImageUploadVM qui contient le bon UtilisateurID.
-
+            else 
+            { 
+                ImageUploadVM image = new ImageUploadVM();
+                image.UtilisateurID = utilisateur.UtilisateurId;
+                return View("Avatar", image);
+            }
             // Sinon, retourner la vue Connexion
             return View("Connexion");
         }
@@ -140,15 +151,37 @@ namespace SussyKart_Partie1.Controllers
         public async Task<IActionResult> Avatar(ImageUploadVM iuvm)
         {
             // Trouver l'utilisateur grâce à son cookie
-
+            IIdentity? identite = HttpContext.User.Identity;
+            string pseudo = HttpContext.User.FindFirstValue(ClaimTypes.Name);
+            Utilisateur? utilisateur = await _context.Utilisateurs.FirstOrDefaultAsync(x => x.Pseudo == pseudo);
+            if (utilisateur != null)
+            {
+                return RedirectToAction("Connexion", "Utilisateurs");
+            }
             // Si aucun utilisateur trouvé, retourner la vue Connexion
             return View("Connexion");
 
             // Si le FormFile contient bel et bien un fichier, ajouter / remplacer 
             // un avatar dans la BD et retourner au Profil.
+            if (ModelState.IsValid)
+            {
+                if (iuvm.FormFile != null && iuvm.FormFile.Length >= 0)
+                {
+                    MemoryStream stream = new MemoryStream();
+                    await iuvm.FormFile.CopyToAsync(stream);
+                    byte[] FichierImage = stream.ToArray();
+                }
+                else
+                {
+                    return RedirectToAction("Avatar");
+                }
+                    
 
+            }
+
+          
             // Si aucun fichier fourni, retourner à la vue Avatar.
-            return RedirectToAction("Avatar");
+            
         }
 
         // Action qui mène vers une vue qui affiche notre liste d'amis et permet d'en ajouter de nouveaux.
@@ -156,12 +189,42 @@ namespace SussyKart_Partie1.Controllers
         public async Task<IActionResult> Amis()
         {
             // Trouver l'utilisateur grâce à son cookie
-
+            IIdentity? identite = HttpContext.User.Identity;
+            string pseudo = HttpContext.User.FindFirstValue(ClaimTypes.Name);
+            Utilisateur? utilisateur = await _context.Utilisateurs.FirstOrDefaultAsync(x => x.Pseudo == pseudo);
             // Si aucun utilisateur trouvé, retourner la vue Connexion
-            return View("Connexion");
+            if(utilisateur == null)
+            {
+                return View("Connexion");
+            }
+            
 
             // Sinon, retourner la vue Amis en lui transmettant une liste d'AmiVM
             // De plus, glisser dans ViewData["utilisateurID"] l'id de l'utilisateur qui a appelé l'action. (Car c'est utilisé dans Amis.cshtml)
+            List<Ami> Ami = _context.Amis.where(x => x.UtilisateurID == utilisateur.UtilisateurId).ToList();
+            List<AmiVM> amis2 = new List<AmiVM>();
+            if (Ami.Count > 0)
+            {
+                foreach (var x in ami)
+                {
+                    ImageUploadVM? image = await _context.Images.where(s => s.UtilisateurID == x.UtilisateurID).FirstOrDefaultAsync();
+                    Utilisateur? UtilisateurAjouter = await _context.Utilisateurs.FirstAsync(x.UtilisateurAjouter);
+                    AmiVM ami1 = new AmiVM();
+
+                    ami1.AmiID = x.AmiID;
+                    ami1.Pseudo = UtilisateurAjouter.Pseudo;
+                    ami1.DernierePartie = UtilisateurAjouter.ParticipationCourses.Select(s => s.DateParticipation).FirstOrDefault();
+                    ami1.DateInscription = UtilisateurAjouter.DateInscription;
+                    if(image != null)
+                    {
+                        ami1.ImageUrl = $"data:image/png;base64,{Convert.ToBase64String(image.FichierImage)}";
+                    }
+
+                    amis2.Add(ami1);
+
+
+                }
+            }
         }
 
         // Action appelée lorsque le formulaire pour ajouter un ami est rempli
@@ -170,14 +233,27 @@ namespace SussyKart_Partie1.Controllers
         public async Task<IActionResult> AjouterAmi(int utilisateurID, string pseudoAmi)
         {
             // Trouver l'utilisateur qui a appelé l'action ET l'utilisateur qui sera ajouté en ami
-
+            Utilisateur? utilisateur = await _context.Utilisateurs.FindAsync(utilisateurID);
+            Utilisateur? ami = await _context.Utilisateurs.FindAsync(pseudoAmi);
             // Si l'utilisateur qui appelle l'action n'existe pas, retourner la vue Connexion.
-            return View("Connexion");
+            if(utilisateur != null)
+            {
+                return View("Connexion");
+            }
+           
 
             // Si l'ami à ajouter n'existe pas rediriger vers la vue Amis.
-            return RedirectToAction("Amis");
+            if(pseudoAmi != null)
+            {
+                return RedirectToAction("Amis");
+            }
+           
 
             // Si l'ami ne faisait pas déjà partie de la liste, créer une nouvelle amitié et l'ajouter dans la BD.
+            if(pseudoAmi != AmiVM)
+            {
+
+            }
             // Puis, dans tous les cas, rediriger vers la vue Amis.
             return RedirectToAction("Amis");
         }
@@ -188,13 +264,28 @@ namespace SussyKart_Partie1.Controllers
         public async Task<IActionResult> SupprimerAmi(int utilisateurID, int amiID)
         {
             // Trouver l'utilisateur qui a appelé l'action ET l'utilisateur qui sera retiré des amis
+            Utilisateur? utilisateur = await _context.Utilisateurs.FindAsync(utilisateurID);
+            Utilisateur? ami = await _context.Utilisateurs.FindAsync(amiID);
             // Si l'utilisateur qui appelle l'action n'existe pas, retourner la vue Connexion.
-            return View("Connexion");
+            if (utilisateur != null)
+            {
+                return View("Connexion");
+            }
+            
 
             // Si l'ami à ajouter n'existe pas rediriger vers la vue Amis.
-            return RedirectToAction("Amis");
+            if (ami == null)
+            {
+                return RedirectToAction("Amis");
+            }
 
+            Ami ami = await _context.ami.FirstOrDefaultAsybnc(a => a.AmiAjoutantID == utilisateurID && a.AmiAjouteID == ami.UtilisateurId);
             // Supprimer l'amitié de la BD et redirigrer vers la vue Amis.
+            if (ami != null)
+            {
+                _context.Ami.Remove(ami);
+                await _context.SaveChangesAsync();
+            }
             return RedirectToAction("Amis");
         }
 
@@ -204,10 +295,16 @@ namespace SussyKart_Partie1.Controllers
         public async Task<IActionResult> DesactiverCompte(int utilisateurID)
         {
             // Trouver l'utilisateur avec l'id utilisateurID et s'il n'existe pas retourner la vue Connexion
-            return View("Connexion");
+            Utilisateur? utilisateur = await _context.Utilisateurs.FindAsync(utilisateurID);
+            if (utilisateur == null)
+            {
+                return View("Connexion");
+            }
+            
 
             // " Suppimer " l'utilisateur de la BD. Votre déclencheur fera le reste.
-
+            _context.Utilisateurs.Remove(utilisateur);
+            await _context.SaveChangesAsync();
             // await HttpContext.SignOutAsync(); Même si mettre cette ligne de code serait judicieux, ne pas le faire !
             return RedirectToAction("Index", "Jeu");
         }
